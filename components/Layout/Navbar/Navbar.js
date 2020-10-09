@@ -1,18 +1,8 @@
-import React, {Fragment} from 'react'
 import Link from 'next/link';
-import Router from 'next/router';
-import NProgress from 'nprogress';
-
-Router.onRouteChangeStart = () => {
-	NProgress.start();
-};
-Router.onRouteChangeComplete = () => {
-	NProgress.done();
-};
 
 const Navbar = () => {
     return (
-        <Fragment>
+        <div>
             <div className="nav-header">
                 <p>
                     Dreamers is the premier writing resource and communication
@@ -21,8 +11,8 @@ const Navbar = () => {
             </div>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="nav-container">
-                    <Link className="navbar-brand" href="/">
-                        Dreamers
+                    <Link href="/">
+                        <a className="navbar-brand">Dreamers</a>
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -42,55 +32,35 @@ const Navbar = () => {
                     >
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link
-                                    className="nav-link"
-                                    href="/how-it-works"
-                                    activeClassName="nav-active"
-                                >
-                                    How it Works
+                                <Link href="/works">
+                                    <a className="nav-link">How It Works</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link
-                                    className="nav-link"
-                                    href="/pricing"
-                                    activeClassName="nav-active"
-                                >
-                                    Pricing
+                                <Link href="/pricing">
+                                    <a className="nav-link">Pricing</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link
-                                    className="nav-link"
-                                    href="/community"
-                                    activeClassName="nav-active"
-                                >
-                                    Our Community
+                                <Link href="/community">
+                                    <a className="nav-link">Our Community</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link
-                                    className="btn btn-outline-primary ml-3 login-link"
-                                    href="/login"
-                                    activeClassName="nav-active"
-                                >
-                                    Login
+                                <Link href="/login">
+                                    <a className="nav-link btn btn-outline-primary px-3">Login</a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link
-                                    className="btn btn-primary ml-3 subscribe-link"
-                                    href="/subscribe"
-                                    activeClassName="nav-active"
-                                >
-                                    Try it FREE
+                                <Link href="/subscribe">
+                                    <a className="nav-link btn btn-primary ml-2 text-white px-3">Try it FREE</a>
                                 </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </Fragment>
+        </div>
     )
 }
 

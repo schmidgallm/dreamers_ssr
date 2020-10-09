@@ -1,10 +1,14 @@
-import styles from '../styles/Home.module.css'
 import Wrapper from '../components/Layout/Wrapper';
+import Header from '../components/HomeComponents/Header';
+import Cards from '../components/HomeComponents/Cards';
+import Info from '../components/HomeComponents/Info';
 
 export default function Home() {
   return (
     <Wrapper>
-      components go here
+      <Header />
+      <Cards />
+      <Info />
     </Wrapper>
   )
 }
